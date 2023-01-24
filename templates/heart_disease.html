@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %} Pneumonia prediction {% endblock title %}
+{% block body %}
+<div class="container my-1 px-1">
+    <h2 class="text-center my-3">Enter the Parameters related to Heart</h2>
+    <form method="post" action="/hdisease2">
+    {% csrf_token %}
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="integer" class="form-control" id="age" name="age" placeholder="enter age">
+        </div>
+        <div class="form-group">
+            <label for="sex">Sex</label>
+            <input type="integer" class="form-control" id="sex" name="sex" placeholder="enter integer 0:1 for female:male">
+        </div>
+        <div class="form-group">
+            <label for="CP">Chest Pain</label>
+            <input type="integer" class="form-control" id="CP" name="CP" placeholder="enter integer 0:1:2:3 according to severity of pain">
+        </div>
+        <div class="form-group">
+          <label for="resting_bp">resting_BP</label>
+          <input type="integer" class="form-control" id="resting_bp" name="resting_bp" placeholder="enter resting blood pressure">
+        </div>
+        <div class="form-group">
+            <label for="cholesterol">cholesterol</label>
+            <input type="integer" class="form-control" id="cholesterol" name="cholesterol" placeholder="enter chloesterol levels">
+        </div>
+        <div class="form-group">
+            <label for="FBS">Fasting blood sugar</label>
+            <input type="integer" class="form-control" id="FBS" name="FBS" placeholder="enter fasting blood sugar level">
+        </div>
+        <div class="form-group">
+            <label for="Recg">Resting ECG</label>
+            <input type="integer" class="form-control" id="Recg" name="Recg" placeholder="enter integer 0:1:2">
+        </div>
+        <div class="form-group">
+            <label for="max_hr">Maximum Heart Rate</label>
+            <input type="integer" class="form-control" id="max_hr" name="max_hr" placeholder="enter maximum heart rate">
+        </div>
+        <div class="form-group">
+            <label for="angina">exercise induced angina</label>
+            <input type="integer" class="form-control" id="angina" name="angina" placeholder="enter integer 0:1 for no:yes">
+        </div>
+        <div class="form-group">
+            <label for="STdep">ST Depression</label>
+            <input type="float" class="form-control" id="STdep" name="STdep" placeholder="enter ST depression values">
+        </div>
+        <div class="form-group">
+            <label for="STslope">ST slope</label>
+            <input type="integer" class="form-control" id="STslope" name="STslope" placeholder="enter integer 0:1:2">
+        </div>
+        <div class="form-group">
+            <label for="MV">Major vessel</label>
+            <input type="integer" class="form-control" id="MV" name="MV" placeholder="enter integer 0:1:2">
+        </div>
+        <div class="form-group">
+            <label for="thalassemia">thalassemia</label>
+            <input type="integer" class="form-control" id="thalassemia" name="thalassemia" placeholder="enter integer 0:1:2:3">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+{% endblock body %}

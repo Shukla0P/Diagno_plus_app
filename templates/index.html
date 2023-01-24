@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}Home {% endblock title %}
+{% block body %}
+<div class="container-fluid my-1 px-1">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="\static\images\liver.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5></h5>
+          <a href="https://www.nhs.uk/conditions/cirrhosis/#:~:text=Cirrhosis%20is%20scarring%20(fibrosis)%20of,the%20liver%2C%20such%20as%20hepatitis." class="btn btn-primary"> Liver Chirosis </a>
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="carousel-item">
+        <img src="\static\images\brain.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5></h5>
+          <a href="https://www.ncbi.nlm.nih.gov/books/NBK576406/" class="btn btn-primary"> Brain Tumor </a>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="\static\images\heart.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5></h5>
+          <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5331469/" class="btn btn-primary"> Heart disease </a>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div> 
+<div class="container-fluid my-1 px-1">
+  <div class="card-group">
+    <div class="card">
+      <img src="\static\images\xgboost1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Liver Cirrhosis Prediction</h5>
+        <p class="card-text">Prediction of liver cirrhosis using XGBoost and logistic regression algorithms, by analysing body fluid data</p>
+        <a href="\cirrhosis" class="btn btn-primary">Prediction</a>
+        <p class="card-text"><small class="text-muted">XGBoost</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="\static\images\svm.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Heart disease Prediction</h5>
+        <p class="card-text">Predicting heart disease using bioparameter by deploying SVM</p>
+        <a href="\heart_disease" class="btn btn-primary">Prediction</a>
+        <p class="card-text"><small class="text-muted">SVM</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="\static\images\effnet.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Brain Tumor</h5>
+        <p class="card-text">Brain tumour prediction by effnet model</p>
+        <a href="\brain_tumor" class="btn btn-primary">Prediction</a>
+        <p class="card-text"><small class="text-muted">Effnet</small></p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}
