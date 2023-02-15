@@ -18,7 +18,7 @@ def filepath():
     return p
 
 def pred(imgg):
-    model = keras.models.load_model(r"D:\django_tutorial\hello\effnet.h5")
+    model = keras.models.load_model(r"/home/shukla-op/django_tutorial/hello/effnet.h5")
     opencvImage = cv2.cvtColor(np.array(imgg), cv2.COLOR_RGB2BGR)
     imgg = cv2.resize(opencvImage,(150,150))
     imgg = imgg.reshape(1,150,150,3)

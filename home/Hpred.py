@@ -1,6 +1,7 @@
 import pickle
 import numpy as np
-pickled_model = pickle.load(open(r"D:\django_tutorial\hello\hmodel.pkl", 'rb'))
+
+pickled_model = pickle.load(open(r"/home/shukla-op/django_tutorial/hello/hmodel.pkl", 'rb'))
 
 def hpred(age,sex,CP,RBP,cholesterol,FBS,Recg,max_hr,angina,ST_depp,ST_slope,MV,thal):
     hpred=[age,sex,CP,RBP,cholesterol,FBS,Recg,max_hr,angina,ST_depp,ST_slope,MV,thal]
